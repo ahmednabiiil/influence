@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  ///////////////////////// wow animation
+  new WOW().init();
+
+  ///////////////////////////
   const logoSlider = $(".logo-slider");
   if (logoSlider.length > 0) {
     logoSlider
@@ -62,7 +66,9 @@ $(document).ready(function () {
             $svg = $svg.attr("id", imgID);
           }
           if (typeof imgClass !== "undefined") {
-            $svg = $svg.attr("class", imgClass + " replaced-svg").css("display", "inline-block");
+            $svg = $svg
+              .attr("class", imgClass + " replaced-svg")
+              .css("display", "inline-block");
           }
           $svg = $svg.removeAttr("xmlns:a");
           $img.replaceWith($svg);

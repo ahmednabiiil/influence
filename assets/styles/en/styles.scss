@@ -45,6 +45,10 @@ body {
 .container-fluid {
   padding-right: 50px !important;
   padding-left: 50px !important;
+  @include media-breakpoint-down(md) {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
 }
 a {
   text-decoration: none;
@@ -127,6 +131,9 @@ a {
   }
   .slick-dots {
     bottom: -70px;
+    @include media-breakpoint-down(sm) {
+      bottom: -45px;
+    }
     li {
       padding: 0;
       width: 16px;
@@ -176,6 +183,9 @@ a {
 
     .navbar-brand {
       width: 80px;
+      @include media-breakpoint-down(md) {
+        width: 60px;
+      }
       img {
         width: 100%;
       }
@@ -190,7 +200,7 @@ a {
         min-height: 120vh;
         background: #fff;
         box-shadow: -5px 0 15px rgba($secondary, 0.3);
-        padding: 80px 20px;
+        padding: 100px 20px;
         z-index: 5;
         @include transition(0.2s all ease-in-out);
         &.show {
@@ -199,8 +209,8 @@ a {
       }
     }
     .mobile-logo {
-      width: 99px;
-      height: 57px;
+      width: 60px;
+      height: 65px;
       position: absolute;
       top: 12px;
       left: 15px;
@@ -346,7 +356,7 @@ a {
     padding: 70px 0 50px 0;
   }
   @include media-breakpoint-down(md) {
-    padding: 40px 0 30px 0;
+    padding: 80px 0 30px 0;
   }
   .left-side {
     background-image: url(../../images/men.png);
@@ -363,6 +373,16 @@ a {
       min-height: 486px;
       width: 266px;
     }
+    @include media-breakpoint-down(lg) {
+      min-height: 405px;
+      width: 250px;
+      margin: auto;
+    }
+    @include media-breakpoint-down(md) {
+      min-height: 405px;
+      width: 220px;
+      margin: auto;
+    }
     .circle {
       position: absolute;
       bottom: -30px;
@@ -372,6 +392,10 @@ a {
       height: 80px;
       border-radius: 50%;
       background-color: $lightGreen;
+      @include media-breakpoint-down(lg) {
+        width: 60px;
+        height: 60px;
+      }
     }
   }
   .right-side {
@@ -392,6 +416,16 @@ a {
       min-height: 486px;
       width: 266px;
     }
+    @include media-breakpoint-down(lg) {
+      min-height: 405px;
+      width: 250px;
+      margin: auto;
+    }
+    @include media-breakpoint-down(md) {
+      min-height: 405px;
+      width: 220px;
+      margin: auto;
+    }
     .circle-1 {
       position: absolute;
       bottom: -30px;
@@ -401,6 +435,12 @@ a {
       height: 150px;
       border-radius: 50%;
       background-color: $orange;
+      @include media-breakpoint-down(md) {
+        width: 60px;
+        height: 60px;
+        bottom: 0;
+        left: 0;
+      }
     }
     .circle-2 {
       position: absolute;
@@ -414,6 +454,12 @@ a {
     }
   }
   .main-title {
+    @include media-breakpoint-down(lg) {
+      margin: 40px 0;
+    }
+    @include media-breakpoint-down(md) {
+      margin: 40px 0;
+    }
     h2 {
       font-size: 75px;
       transform: scale(1.6);
@@ -482,6 +528,12 @@ a {
         display: inline-block;
         border-bottom: 1px wavy #222;
         position: relative;
+        @include media-breakpoint-down(lg) {
+          font-size: 30px;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 25px;
+        }
         &::after {
           width: 55%;
         }
@@ -489,7 +541,7 @@ a {
     }
     .box-primary {
       margin: 20px 20px 20px 20px;
-      padding: 30px 50px 30px 30px;
+      padding: 20px 40px 20px 20px;
       background-color: #fff8e74a;
       border-top-right-radius: 30px;
       border-bottom-left-radius: 30px;
@@ -500,6 +552,10 @@ a {
       position: relative;
       overflow: hidden;
       @include transition(all 0.3s ease-in-out);
+      @include media-breakpoint-down(md) {
+        padding: 15px 20px 20px 20px;
+        margin: 20px 0 20px 0;
+      }
       &:hover {
         background-color: #ede9db4a;
         img {
@@ -531,7 +587,7 @@ a {
     }
     .box-light-green {
       margin: 20px 20px 20px 20px;
-      padding: 30px 50px 30px 30px;
+      padding: 20px 40px 20px 20px;
       background-color: #fff8e74a;
       border-top-right-radius: 30px;
       border-bottom-left-radius: 30px;
@@ -542,6 +598,10 @@ a {
       position: relative;
       overflow: hidden;
       @include transition(all 0.3s ease-in-out);
+      @include media-breakpoint-down(md) {
+        padding: 15px 20px 20px 20px;
+        margin: 20px 0 20px 0;
+      }
       &:hover {
         background-color: #ede9db4a;
         img {
@@ -573,7 +633,7 @@ a {
     }
     .box-orange {
       margin: 20px 20px 20px 20px;
-      padding: 30px 50px 30px 30px;
+      padding: 20px 40px 20px 20px;
       background-color: #fff8e74a;
       border-top-right-radius: 30px;
       border-bottom-left-radius: 30px;
@@ -584,6 +644,10 @@ a {
       position: relative;
       overflow: hidden;
       @include transition(all 0.3s ease-in-out);
+      @include media-breakpoint-down(md) {
+        padding: 15px 20px 20px 20px;
+        margin: 20px 0 20px 0;
+      }
       &:hover {
         background-color: #ede9db4a;
         img {
@@ -624,10 +688,10 @@ a {
     padding: 70px 0;
   }
   @include media-breakpoint-down(lg) {
-    padding: 50px 0;
+    padding: 50px 0 0 0;
   }
   @include media-breakpoint-down(md) {
-    padding: 30px 0;
+    padding: 30px 0 0 0;
   }
   .our-marketing {
     .border-wave {
@@ -636,6 +700,14 @@ a {
         letter-spacing: 5px;
         font-family: $anotherFont;
         margin-bottom: 60px;
+        @include media-breakpoint-down(lg) {
+          font-size: 30px;
+          margin-bottom: 40px;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 25px;
+          margin-bottom: 40px;
+        }
         &::after {
           left: 0;
           transform: translate(0);
@@ -647,6 +719,9 @@ a {
       color: #9789a1;
       margin-bottom: 50px;
       line-height: 1.8;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 20px;
+      }
     }
   }
   .marketing-photo {
@@ -658,10 +733,12 @@ a {
       width: 500px;
     }
     @include media-breakpoint-down(lg) {
-      width: 300px;
+      width: 500px;
+      margin: 50px auto 50px auto;
     }
     @include media-breakpoint-down(md) {
-      width: 200px;
+      width: 340px;
+      margin: 50px auto 50px auto;
     }
     img {
       border-top-right-radius: 150px;
@@ -676,6 +753,10 @@ a {
       height: 70px;
       border-radius: 50%;
       background-color: $orange;
+      @include media-breakpoint-down(md) {
+        width: 40px;
+        height: 40px;
+      }
     }
     .primary-circle {
       position: absolute;
@@ -693,6 +774,9 @@ a {
 
 .our-brands {
   margin-top: 100px;
+  @include media-breakpoint-down(lg) {
+    margin-top: 50px;
+  }
   .brand-photo {
     background-image: url(../../images/brand-photo.jpg);
     background-position: center;
@@ -704,17 +788,44 @@ a {
     border-bottom-left-radius: 50px;
     display: flex;
     align-items: center;
+    @include media-breakpoint-down(lg) {
+      min-height: 350px;
+      padding: 0 20px;
+    }
+    @include media-breakpoint-down(md) {
+      min-height: 324px;
+      padding: 0 20px;
+    }
     .brand-contact {
       width: 50%;
+      @include media-breakpoint-down(lg) {
+        width: 80%;
+      }
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
       h2 {
         font-size: 40px;
         font-family: $anotherFont;
         margin-bottom: 50px;
+        @include media-breakpoint-down(lg) {
+          font-size: 30px;
+          margin-bottom: 30px;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 25px;
+        }
       }
       .cus__btn {
         padding: 25px 0;
         background-color: #000000;
         color: $white;
+        @include media-breakpoint-down(lg) {
+          padding: 15px 0;
+        }
+        @include media-breakpoint-down(md) {
+          padding: 10px 0;
+        }
         &:hover {
           background-color: $primary;
           color: $white;
@@ -726,6 +837,12 @@ a {
 // start our-soical
 .our-soical {
   padding: 100px 0;
+  @include media-breakpoint-down(lg) {
+    padding: 50px 0;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 30px 0;
+  }
   .des {
     .border-wave {
       h2 {
@@ -733,6 +850,14 @@ a {
         font-family: $anotherFont;
         margin-bottom: 50px;
         letter-spacing: 5px;
+        @include media-breakpoint-down(lg) {
+          font-size: 30px;
+          margin-bottom: 40px;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 25px;
+          margin-bottom: 40px;
+        }
         &::after {
           left: 0;
           transform: translate(0);
@@ -743,10 +868,22 @@ a {
     p {
       color: #9789a1;
       line-height: 1.8;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 30px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 20px;
+      }
     }
   }
   .soical-media {
     margin-bottom: 100px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 50px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 40px;
+    }
     img {
       width: 50px;
       height: 50px;
@@ -755,6 +892,9 @@ a {
     h2 {
       font-size: 18px;
       width: 80%;
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
     }
     .link-more {
       a {
@@ -766,11 +906,25 @@ a {
 // start logos
 .logos {
   margin-bottom: 100px;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 80px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 70px;
+  }
   h2 {
     font-family: $anotherFont;
     font-size: 40px;
     letter-spacing: 5px;
     text-transform: uppercase;
+    @include media-breakpoint-down(lg) {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
   }
   .logo-slider {
     .photo-logo {
@@ -801,6 +955,12 @@ a {
 }
 .faq {
   padding: 150px 0;
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 20px 0;
+  }
   h2 {
     font-size: 40px;
     font-family: $anotherFont;
@@ -808,6 +968,9 @@ a {
   }
   .faq-accordion {
     margin-top: 50px;
+    @include media-breakpoint-down(md) {
+      margin-top: 20px;
+    }
     .accordion {
       .accordion-item {
         margin-bottom: 30px;
@@ -822,6 +985,9 @@ a {
             border-bottom-right-radius: 40px;
             font-size: 18px;
             font-weight: 600;
+            @include media-breakpoint-down(md) {
+              padding: 20px 35px;
+            }
             &:focus {
               box-shadow: none;
             }
@@ -860,7 +1026,7 @@ a {
       background-image: url(../../images/growing-back.png);
       background-position: center;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover;
       display: flex;
       align-items: center;
       min-height: 400px;
@@ -868,8 +1034,32 @@ a {
       position: relative;
       top: -200px;
       margin-top: 200px;
+      border-top-right-radius: 190px;
+      border-bottom-left-radius: 190px;
+      @include media-breakpoint-down(lg) {
+        top: -50px;
+        margin-top: 50px;
+        padding: 0 20px;
+        min-height: 250px;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+      }
+      @include media-breakpoint-down(md) {
+        top: -50px;
+        margin-top: 50px;
+        padding: 0 20px;
+        min-height: 250px;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+      }
       .growing-read {
         width: 50%;
+        @include media-breakpoint-down(lg) {
+          width: 80%;
+        }
+        @include media-breakpoint-down(md) {
+          width: 100%;
+        }
         h2 {
           font-size: 35px;
           font-family: $anotherFont;
@@ -877,6 +1067,12 @@ a {
           margin-bottom: 30px;
           text-transform: uppercase;
           line-height: 1.3;
+          @include media-breakpoint-down(lg) {
+            font-size: 25px;
+          }
+          @include media-breakpoint-down(md) {
+            font-size: 20px;
+          }
         }
         .link-more {
           &:hover {
@@ -893,9 +1089,16 @@ a {
   .footer {
     padding-bottom: 50px;
     .footer-soical {
-      .footer-logo {
-        width: 200px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 50px;
+      }
+      @include media-breakpoint-down(md) {
         margin-bottom: 30px;
+      }
+      .footer-logo {
+        width: 85px;
+        margin-top: -10px;
+        margin-bottom: 20px;
         img {
           width: 100%;
         }
@@ -930,7 +1133,13 @@ a {
     .main-footer {
       display: flex;
       justify-content: space-between;
+      @include media-breakpoint-down(lg) {
+        flex-wrap: wrap;
+      }
       .mid-footer {
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 30px;
+        }
         h2 {
           font-size: 25px;
           font-family: $anotherFont;
@@ -949,6 +1158,9 @@ a {
     }
     .news-letter {
       margin-left: 50px;
+      @include media-breakpoint-down(lg) {
+        margin-left: 0px;
+      }
       h2 {
         font-size: 25px;
         font-family: $anotherFont;
@@ -996,8 +1208,101 @@ a {
   color: $white;
   text-align: center;
   padding: 10px 0;
+  @include media-breakpoint-down(md) {
+    padding: 10px 5px;
+  }
   p {
     font-size: 12px;
     margin-bottom: 0;
+  }
+}
+
+// start influencer-page
+.btn-influence {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  box-shadow: none;
+  padding: 7px;
+  min-width: 170px;
+  font-size: 16px;
+  @include transition(all 0.3s ease-in-out);
+  i {
+    color: $white;
+    margin-right: 2px;
+    @include transition(all 0.3s ease-in-out);
+  }
+  &:hover {
+    color: rgb(218, 218, 218);
+    i {
+      color: rgb(218, 218, 218);
+    }
+  }
+  &:focus {
+    background-color: rgb(134, 134, 134);
+  }
+}
+.form-control {
+  padding: 5px 5px 5px 10px;
+  font-size: 14px;
+  &:focus {
+    box-shadow: none;
+    border-color: #eee;
+  }
+  &::placeholder {
+    font-size: 12px;
+  }
+}
+.form-select {
+  font-size: 14px;
+}
+.influencer-page {
+  padding: 200px 0;
+  .filters {
+    margin-top: 100px;
+    .buttom-groub {
+      border-radius: 3px;
+      display: flex;
+      flex-wrap: wrap;
+      .dropdown {
+        .dropdown-menu {
+          padding: 10px 5px;
+          &.show {
+            min-width: 210px;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+          li {
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+            span {
+              font-size: 11px;
+            }
+          }
+        }
+        .dropdown-item {
+          padding: 0;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+        .form-select {
+          &:focus {
+            border: 1px solid #eee;
+            box-shadow: none;
+          }
+        }
+        .alert {
+          color: #842029;
+          background-color: #f8d7da;
+          border-color: #f5c2c7;
+          padding: 10px;
+          font-size: 12px;
+          margin-top: 10px;
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }
