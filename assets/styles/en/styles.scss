@@ -39,9 +39,9 @@ $anotherFont: "EB Garamond", sans-serif;
 body {
   font-family: "Poppins", sans-serif;
 }
-.warp {
-  overflow: hidden;
-}
+// .warp {
+//   overflow: hidden;
+// }
 .container-fluid {
   padding-right: 50px !important;
   padding-left: 50px !important;
@@ -173,7 +173,7 @@ a {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 999;
+  z-index: 99999;
   transition: 0.2s all ease-in-out;
   .navbar {
     padding: 0;
@@ -1264,6 +1264,11 @@ a {
       border-radius: 3px;
       display: flex;
       flex-wrap: wrap;
+      .btn-influence {
+        margin-bottom: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+      }
       .dropdown {
         .dropdown-menu {
           padding: 10px 5px;
@@ -1277,7 +1282,7 @@ a {
               margin-bottom: 10px;
             }
             span {
-              font-size: 11px;
+              font-size: 14px;
             }
           }
         }
@@ -1302,6 +1307,170 @@ a {
           margin-top: 10px;
           margin-bottom: 0;
         }
+        .form-label {
+          font-size: 14px;
+        }
+        .btn-search {
+        }
+      }
+    }
+  }
+  .searsh-by-name {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    .page-num {
+      min-width: 100px;
+    }
+    .search {
+      .input-group {
+        .input-group-text {
+          background-color: #000;
+          i {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .fav-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    .fav-unfav {
+      display: flex;
+      align-items: center;
+      .fav-btn {
+        background-color: #efefef;
+        color: #000;
+        border: none;
+        padding: 10px 0;
+        border-radius: 5px;
+        min-width: 160px;
+        i {
+          color: #000;
+          margin-right: 3px;
+        }
+      }
+      .big-arrow {
+        margin: 0 20px;
+        i {
+          font-size: 30px;
+        }
+      }
+    }
+    .add-remove {
+      display: flex;
+      align-items: center;
+      .form-check {
+        margin-right: 10px;
+      }
+      .add-btn {
+        color: #fff;
+        background-color: #28a745;
+        border: none;
+        padding: 10px 0;
+        border-radius: 5px;
+        min-width: 80px;
+        margin-right: 10px;
+      }
+      .remove-btn {
+        color: #fff;
+        background-color: #dc3545;
+        border: none;
+        padding: 10px 0;
+        border-radius: 5px;
+        min-width: 110px;
+      }
+    }
+  }
+  .all-items {
+    margin-top: 150px;
+    .card-item {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+      border-radius: 10px;
+      position: relative;
+      margin-bottom: 30px;
+      .card-photo {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        img {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          margin: 0 auto;
+        }
+      }
+      a {
+        color: #000;
+        font-size: 16px;
+        @include lineNum(1);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      h2 {
+        font-size: 18px;
+        margin: 10px 0;
+        @include lineNum(1);
+      }
+      p {
+        font-size: 14px;
+        margin-bottom: 10px;
+        @include lineNum(1);
+      }
+      .soical-details {
+        display: flex;
+        justify-content: space-between;
+        .des {
+          h2 {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+          }
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+      .icons {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        i {
+          @include transition(all 0.3s ease-in-out);
+          margin-right: 10px;
+          font-size: 17px;
+        }
+        .love {
+          i {
+            &:hover {
+              color: red;
+            }
+          }
+        }
+        .like {
+          i {
+            &:hover {
+              color: blue;
+            }
+          }
+        }
+        .dis-like {
+          i {
+            &:hover {
+              color: orange;
+            }
+          }
+        }
+      }
+      .form-check {
+        position: absolute;
+        top: 15px;
+        right: 10px;
       }
     }
   }
