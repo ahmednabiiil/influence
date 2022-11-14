@@ -168,15 +168,14 @@ a {
   top: 0;
   z-index: 999;
   transition: 0.2s all ease-in-out;
-  padding: 20px 0;
   .navbar {
-    padding: 10px 0;
+    padding: 0;
     @include media-breakpoint-down(lg) {
       padding: 0;
     }
 
     .navbar-brand {
-      width: 120px;
+      width: 80px;
       img {
         width: 100%;
       }
