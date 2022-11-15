@@ -39,9 +39,9 @@ $anotherFont: "EB Garamond", sans-serif;
 body {
   font-family: "Poppins", sans-serif;
 }
-// .warp {
-//   overflow: hidden;
-// }
+.warp {
+  overflow: hidden;
+}
 .container-fluid {
   padding-right: 50px !important;
   padding-left: 50px !important;
@@ -1331,6 +1331,9 @@ a {
     }
     .alerts-close {
       display: flex;
+      @include media-breakpoint-down(lg) {
+        justify-content: center;
+      }
       .alert-dismissible {
         background-color: #eee;
         display: inline-block;
@@ -1563,10 +1566,18 @@ a {
   margin-top: 100px;
   .login {
     margin: 200px auto;
-    max-width: 600px;
-    padding: 20px;
+    max-width: 500px;
+    padding: 30px;
     background-color: #eee;
-    box-shadow: -5px 0 15px rgba($secondary, 0.3);
+    box-shadow: 3px 0 14px rgb(21 27 49 / 20%);
+    border-radius: 10px;
+    @include media-breakpoint-down(md) {
+      margin: 100px auto;
+    }
+    h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
     .lost-pass {
       margin-bottom: 50px;
       span {
@@ -1580,7 +1591,21 @@ a {
       }
     }
     .form-control {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
+      padding: 8px;
+    }
+    .form-check {
+      margin-bottom: 40px;
+    }
+    .form-check-label {
+      font-size: 14px;
+    }
+    .cus-black {
+      background-color: #000;
+      color: $white;
+      padding: 5px;
+      border-radius: 5px;
+      width: 100%;
     }
   }
 }
