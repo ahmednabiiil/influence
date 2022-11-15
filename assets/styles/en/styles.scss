@@ -1258,12 +1258,22 @@ a {
 }
 .influencer-page {
   padding: 200px 0;
+  @include media-breakpoint-down(md) {
+    padding: 100px 0;
+  }
   .filters {
     margin-top: 100px;
+    @include media-breakpoint-down(md) {
+      margin-top: 50px;
+    }
     .buttom-groub {
       border-radius: 3px;
       display: flex;
       flex-wrap: wrap;
+      // justify-content: center;
+      @include media-breakpoint-down(lg) {
+        justify-content: center;
+      }
       .btn-influence {
         margin-bottom: 10px;
         margin-right: 10px;
@@ -1312,15 +1322,55 @@ a {
         }
         .btn-search {
         }
+        .rang-input {
+          label {
+            min-width: 50px;
+          }
+        }
+      }
+    }
+    .alerts-close {
+      display: flex;
+      .alert-dismissible {
+        background-color: #eee;
+        display: inline-block;
+        font-size: 12px;
+        padding: 5px 25px 5px 10px;
+        margin-top: 10px;
+        margin-right: 10px;
+        i {
+          margin-right: 3px;
+        }
+        .btn-close {
+          position: absolute;
+          top: 4px;
+          right: 7px;
+          font-size: 9px;
+          z-index: 2;
+          padding: 0;
+          &:focus {
+            box-shadow: none;
+          }
+        }
       }
     }
   }
   .searsh-by-name {
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 30px;
+    @include media-breakpoint-down(md) {
+      padding: 0 10px;
+      margin-top: 30px;
+    }
     .page-num {
       min-width: 100px;
+      .form-select {
+        &:focus {
+          box-shadow: none;
+          border: 1px solid rgb(207, 207, 207);
+        }
+      }
     }
     .search {
       .input-group {
@@ -1337,6 +1387,11 @@ a {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+      margin-top: 30px;
+    }
     .fav-unfav {
       display: flex;
       align-items: center;
@@ -1344,9 +1399,17 @@ a {
         background-color: #efefef;
         color: #000;
         border: none;
-        padding: 10px 0;
+        padding: 8px 0;
+        font-size: 14px;
         border-radius: 5px;
         min-width: 160px;
+        &.active {
+          background-color: $primary;
+          color: $white;
+          i {
+            color: $white;
+          }
+        }
         i {
           color: #000;
           margin-right: 3px;
@@ -1354,6 +1417,18 @@ a {
       }
       .big-arrow {
         margin: 0 20px;
+        &.rotat {
+          @include transition(all 0.3s ease-in-out);
+          transform: rotate(-90deg);
+          i {
+          }
+        }
+        &.rotattwo {
+          @include transition(all 0.3s ease-in-out);
+          transform: rotate(90deg);
+          i {
+          }
+        }
         i {
           font-size: 30px;
         }
@@ -1362,6 +1437,9 @@ a {
     .add-remove {
       display: flex;
       align-items: center;
+      @include media-breakpoint-down(md) {
+        margin-top: 30px;
+      }
       .form-check {
         margin-right: 10px;
       }
@@ -1385,7 +1463,10 @@ a {
     }
   }
   .all-items {
-    margin-top: 150px;
+    margin-top: 70px;
+    @include media-breakpoint-down(md) {
+      margin-top: 50px;
+    }
     .card-item {
       text-align: center;
       padding: 20px;
@@ -1444,25 +1525,26 @@ a {
           @include transition(all 0.3s ease-in-out);
           margin-right: 10px;
           font-size: 17px;
+          cursor: pointer;
         }
         .love {
           i {
             &:hover {
-              color: red;
+              color: #dc3545;
             }
           }
         }
         .like {
           i {
             &:hover {
-              color: blue;
+              color: #0d6efd;
             }
           }
         }
         .dis-like {
           i {
             &:hover {
-              color: orange;
+              color: #ffc107;
             }
           }
         }
@@ -1472,6 +1554,33 @@ a {
         top: 15px;
         right: 10px;
       }
+    }
+  }
+}
+
+//////////////////////////////// start login
+.login-page {
+  margin-top: 100px;
+  .login {
+    margin: 200px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #eee;
+    box-shadow: -5px 0 15px rgba($secondary, 0.3);
+    .lost-pass {
+      margin-bottom: 50px;
+      span {
+        margin: 0 5px;
+      }
+      a {
+        color: #000;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .form-control {
+      margin-bottom: 50px;
     }
   }
 }

@@ -1,4 +1,18 @@
 $(document).ready(function () {
+  // arrow animation
+  $("#buttonone").click(function () {
+    $("#buttonone").addClass("active");
+    $("#buttonarrow").addClass("rotat");
+    $("#buttonarrow").removeClass("rotattwo");
+    $("#buttontwo").removeClass("active");
+  });
+
+  $("#buttontwo").click(function () {
+    $("#buttontwo").addClass("active");
+    $("#buttonarrow").addClass("rotattwo");
+    $("#buttonarrow").removeClass("rotat");
+    $("#buttonone").removeClass("active");
+  });
   ///////////////////////// wow animation
   new WOW().init();
 
@@ -83,6 +97,8 @@ $(document).ready(function () {
     delay: 10,
     time: 1000,
   });
+
+  // aroww animation
 });
 $(window).scroll(function () {
   var scroll = $(window).scrollTop();
