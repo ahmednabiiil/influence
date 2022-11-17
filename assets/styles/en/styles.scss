@@ -347,6 +347,10 @@ a {
 }
 
 .banner {
+  background-image: url(../../images/main-bg-home.png);
+  background-position: center center;
+  background-repeat: repeat-x;
+  background-size: 60% auto;
   padding: 180px 0 100px 0;
   border-bottom: 1px dashed rgb(189, 189, 189);
   @include media-breakpoint-down(xl) {
@@ -354,6 +358,7 @@ a {
   }
   @include media-breakpoint-down(lg) {
     padding: 70px 0 50px 0;
+    background-size: cover;
   }
   @include media-breakpoint-down(md) {
     padding: 80px 0 30px 0;
@@ -509,15 +514,22 @@ a {
 //  start our-service
 
 .our-service {
+  background-image: url(../../images/main-bg-home.png);
+  background-position: center center;
+  background-repeat: repeat-x;
+  background-size: 90% auto;
   padding: 100px 0;
+
   @include media-breakpoint-down(xl) {
     padding: 50px 0;
   }
   @include media-breakpoint-down(lg) {
     padding: 50px 0;
+    background-size: cover;
   }
   @include media-breakpoint-down(md) {
     padding: 20px 0;
+    background-size: cover;
   }
   .service {
     .border-wave {
@@ -557,7 +569,7 @@ a {
         margin: 20px 0 20px 0;
       }
       &:hover {
-        background-color: #ede9db4a;
+        background-color: #fdf7ff;
         img {
           transform: scale(0.9);
         }
@@ -603,7 +615,7 @@ a {
         margin: 20px 0 20px 0;
       }
       &:hover {
-        background-color: #ede9db4a;
+        background-color: #fdf7ff;
         img {
           transform: scale(0.9);
         }
@@ -649,7 +661,7 @@ a {
         margin: 20px 0 20px 0;
       }
       &:hover {
-        background-color: #ede9db4a;
+        background-color: #fdf7ff;
         img {
           transform: scale(0.9);
         }
@@ -905,12 +917,12 @@ a {
 }
 // start logos
 .logos {
-  margin-bottom: 100px;
+  margin-bottom: 0px;
   @include media-breakpoint-down(lg) {
     margin-bottom: 80px;
   }
   @include media-breakpoint-down(md) {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
   }
   h2 {
     font-family: $anotherFont;
@@ -926,6 +938,15 @@ a {
       margin-bottom: 30px;
     }
   }
+  .link-more {
+    margin-top: 90px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 50px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-top: 20px;
+    }
+  }
   .logo-slider {
     .photo-logo {
       width: 150px;
@@ -937,7 +958,7 @@ a {
       align-items: center;
       justify-content: center;
       margin: 0 auto;
-      border: 7px solid #eee;
+      border: 3px solid #eee;
       overflow: hidden;
       @include transition(all 0.3s ease-in-out);
       margin: 0 20px;
@@ -948,7 +969,7 @@ a {
         height: 100%;
       }
       &:hover {
-        border: 7px solid $primary;
+        border: 3px solid $primary;
       }
     }
   }
@@ -1124,7 +1145,8 @@ a {
             margin-right: 20px;
           }
           &:hover {
-            background-color: rgb(74, 73, 73);
+            // background-color: rgb(74, 73, 73);
+            background-color: $primary;
             color: $white;
           }
         }
@@ -1341,16 +1363,24 @@ a {
         padding: 5px 25px 5px 10px;
         margin-top: 10px;
         margin-right: 10px;
+        @include media-breakpoint-down(md) {
+          font-size: 10px;
+        }
         i {
           margin-right: 3px;
         }
         .btn-close {
           position: absolute;
-          top: 4px;
-          right: 7px;
-          font-size: 9px;
+          top: 50%;
+          right: -4px;
+          transform: translate(-50%, -50%);
+          font-size: 6px;
           z-index: 2;
           padding: 0;
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          border: 1px solid #000;
           &:focus {
             box-shadow: none;
           }
@@ -1522,39 +1552,70 @@ a {
       .icons {
         display: flex;
         position: absolute;
-        top: 15px;
-        left: 20px;
+        top: 10px;
+        left: 10px;
+        background: rgb(255, 255, 255);
+        border-radius: 15px;
+        padding: 3px 5px;
         i {
           @include transition(all 0.3s ease-in-out);
-          margin-right: 10px;
+          margin-right: 5px;
+          margin-left: 5px;
           font-size: 17px;
           cursor: pointer;
         }
         .love {
           i {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
             &:hover {
-              color: #dc3545;
+              color: #fff;
+              background-color: #dc3545;
             }
           }
         }
         .like {
           i {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
             &:hover {
-              color: #0d6efd;
+              color: #fff;
+              background-color: #0d6efd;
             }
           }
         }
         .dis-like {
           i {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
             &:hover {
-              color: #ffc107;
+              color: #fff;
+              background-color: #ffc107;
             }
           }
         }
       }
       .form-check {
         position: absolute;
-        top: 15px;
+        top: 12px;
         right: 10px;
       }
     }
@@ -1568,7 +1629,7 @@ a {
     margin: 200px auto;
     max-width: 500px;
     padding: 30px;
-    background-color: #eee;
+    background-color: #fff;
     box-shadow: 3px 0 14px rgb(21 27 49 / 20%);
     border-radius: 10px;
     @include media-breakpoint-down(md) {
@@ -1606,6 +1667,7 @@ a {
       padding: 5px;
       border-radius: 5px;
       width: 100%;
+      border: none;
     }
   }
 }
